@@ -4,7 +4,7 @@ var svgHeight = 500;
 var margin = {
     top: 20,
     right: 40, 
-    bottom: 20,
+    bottom: 60,
     left: 40
 };
 
@@ -50,7 +50,7 @@ d3.csv("assets/data/data.csv").then(function(incomeData) {
         .attr("cx", d => xLinearScale(d.poverty))
         .attr("cy", d => yLinearScale(d.healthcare))
         .attr("r", "10")
-        .attr("fill", "red")
+        .attr("fill", "blue")
         .attr("opacity", "0.5");
 
     var toolTip = d3.tip()
@@ -69,5 +69,17 @@ d3.csv("assets/data/data.csv").then(function(incomeData) {
         .on("mouseout", function(data, index) {
             toolTip.hide(data);
         });
-        
+    
+    chartGroup.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left - 5)
+        .attr("x", 0 - (height))
+        .attr("dy", "1em")
+        .attr("class", "axisText")
+        .text("Lacks Healthcare (%)");
+
+    chartGroup.append("text")
+        .attr("transform", `translate(${width / width}, ${height + margin.top + 20})`)
+        .attr("class", "axisText")
+        .text("In Poverty (%)");
 });
