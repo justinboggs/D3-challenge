@@ -50,8 +50,8 @@ d3.csv("assets/data/data.csv").then(function(incomeData) {
         .attr("cx", d => xLinearScale(d.poverty))
         .attr("cy", d => yLinearScale(d.healthcare))
         .attr("r", "10")
-        .attr("fill", "blue")
-        .attr("opacity", "0.5");
+        .attr("fill", "#99badd")
+        .attr("opacity", ".70");
 
     var toolTip = d3.tip()
         .attr("class", "tooltip")
