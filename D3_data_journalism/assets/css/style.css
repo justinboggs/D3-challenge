@@ -31,12 +31,10 @@ body {
 }
 
 .navbar {
-  background-color: grey;
+  background-color:darkgrey;
+  color: white;
 }
 
 .table {
   width: auto;
 }
-
-
-
