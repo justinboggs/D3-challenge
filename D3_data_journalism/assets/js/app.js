@@ -86,14 +86,14 @@ d3.csv("D3_data_journalism/assets/data/data.csv").then(function(incomeData) {
     // create axis labels
     chartGroup.append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", 0 - margin.left - 5)
-        .attr("x", 0 - (height))
+        .attr("y", 0 - margin.left + 0)
+        .attr("x", 200 - height)
         .attr("dy", "1em")
         .attr("class", "axisText")
         .text("Lacks Healthcare (%)");
 
     chartGroup.append("text")
-        .attr("transform", `translate(${width / width}, ${height + margin.top + 20})`)
+        .attr("transform", `translate(${width / 2}, ${height + margin.top + 12})`)
         .attr("class", "axisText")
         .text("In Poverty (%)");
 }).catch(function(error) {
