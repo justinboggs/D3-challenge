@@ -22,16 +22,13 @@ body {
   padding-top: 0px;
   padding-bottom: 0px;
   text-align: center;
-  background-color: #f5f5f5;
-}
-
-#footer p {
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
   font-size: 16px;
 }
 
 .navbar {
-  background-color:#99badd;
+  background-color:lightslategrey;
   font-family: 'Times New Roman', Times, serif ;
 }
 
@@ -56,4 +53,12 @@ body {
 .title {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-item>a:hover {
+  background-color: white;
+}
+
+.container>a:hover {
+  background-color: white;
 }
