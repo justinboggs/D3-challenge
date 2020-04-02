@@ -32,9 +32,28 @@ body {
 
 .navbar {
   background-color:#99badd;
+  font-family: 'Times New Roman', Times, serif ;
 }
 
 .table {
   width: auto;
 }
 
+.container {
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.heading {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#scatter {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}

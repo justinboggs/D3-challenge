@@ -51,17 +51,17 @@ d3.csv("D3_data_journalism/assets/data/data.csv").then(function(incomeData) {
         .call(leftAxis);
 
     // create circles    
-    var circlesGroup = chartGroup.selectAll("circle")
+    var circlesGroup = chartGroup.selectAll("g circle")
         .data(incomeData)
         .enter()
         .append("circle")
         .attr("class", "stateCircle")
         .attr("cx", d => xLinearScale(d.poverty))
         .attr("cy", d => yLinearScale(d.healthcare))
-        .attr("r", "7")
+        .attr("r", "12")
         .attr("stroke", "black")
-        .attr("opacity", ".80");
-
+        .attr("opacity", ".60")
+    
     // initialize tooltip
     var toolTip = d3.tip()
         .attr("class", "d3-tip")
@@ -74,7 +74,7 @@ d3.csv("D3_data_journalism/assets/data/data.csv").then(function(incomeData) {
     chartGroup.call(toolTip);
 
     // create event listeners
-    circlesGroup.on("click", function(data) {
+    circlesGroup.on("mouseover", function(data) {
         toolTip.show(data, this);
     })
 
